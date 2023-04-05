@@ -1,7 +1,7 @@
 import customtkinter
 import keyboard
 
-from main import get_gpt_ans, get_pattern_list, add_pattern
+from GPT import get_gpt_ans, get_pattern_list, add_pattern
 
 customtkinter.set_appearance_mode("System")  # Modes: "System" (standard), "Dark", "Light"
 customtkinter.set_default_color_theme("blue")  # Themes: "blue" (standard), "green", "dark-blue"
