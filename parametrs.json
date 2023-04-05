@@ -1,0 +1,6 @@
+{
+  "templates": {
+    "Cover letter": "Write a cover letter for this job [prompt]",
+    "Without pattern": "[prompt]"
+  }
+}
