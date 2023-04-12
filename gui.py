@@ -91,13 +91,13 @@ class App(customtkinter.CTk):
     def own_func(self):
         text = self.entry.get()
 
-        self.entry.delete(first_index=0, last_index=len(text) + 1)
+        self.entry.delete(first_index=0, last_index="end")
 
         template = self.patterns.get()
 
         answer = get_gpt_ans(text, template)
 
-        self.textbox.insert('0.0', answer)
+        self.textbox.insert("0.0", answer)
 
     def submit_pattern(self):
         add_pattern(self.entry_title_patt.get(), self.entry_patt.get())
