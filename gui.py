@@ -1,7 +1,11 @@
 import customtkinter
 import keyboard
 
+from PIL import Image
+from pystray import Icon, MenuItem, Menu
+
 from GPT import get_gpt_ans, get_pattern_list, add_pattern
+
 
 customtkinter.set_appearance_mode("System")  # Modes: "System" (standard), "Dark", "Light"
 customtkinter.set_default_color_theme("blue")  # Themes: "blue" (standard), "green", "dark-blue"
@@ -92,6 +96,7 @@ class App(customtkinter.CTk):
         text = self.entry.get()
 
         self.entry.delete(first_index=0, last_index="end")
+        self.textbox.delete(index1='0.0', index2='end')
 
         template = self.patterns.get()
 
@@ -104,10 +109,14 @@ class App(customtkinter.CTk):
         self.new_pattern_frame.withdraw()
 
 
-def main():
-    App().mainloop()
 
 
-if __name__ == "__main__":
-    keyboard.add_hotkey('ctrl+alt+a', main)
+
+
+
+if __name__ == '__main__':
+    keyboard.add_hotkey('ctrl+alt+a', start)
     keyboard.wait()
+
+
+

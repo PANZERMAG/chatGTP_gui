@@ -1,22 +1,31 @@
-import pystray
 from PIL import Image
+from pystray import Icon, MenuItem, Menu
 
-def on_exit():
-    # Функция, которая будет вызываться при выходе из программы
-    print("Программа завершена")
+from gui import App
 
-def on_click(icon):
-    # Функция, которая будет вызываться при клике на иконку
-    print("Клик на иконку")
 
-# Создание иконки
-image = Image.open("src/img/")
-menu = pystray.Menu(pystray.MenuItem("Выход", on_exit))
-icon = pystray.Icon("example", image, "Пример", menu)
+def start():
+    App().mainloop()
 
-# Добавление обработчика клика на иконку
-icon.run(on_click)
 
-# Запуск бесконечного цикла, чтобы программа не завершилась
-while True:
-    pass
+def exit(icon):
+    icon.stop()
+
+
+def reformat_image():
+    image = Image.open('src/img/logo.png')
+
+    return image
+
+
+def main_tray():
+    icon = Icon('test', reformat_image(),
+                menu=Menu(
+                    MenuItem('Start', start),
+                    MenuItem('Exit', exit)
+                )
+                ).run()
+
+
+if __name__ == '__main__':
+    main_tray()
