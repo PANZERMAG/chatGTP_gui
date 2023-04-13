@@ -1,7 +1,9 @@
+from gui import App
+
 from PIL import Image
 from pystray import Icon, MenuItem, Menu
 
-from gui import App
+
 
 
 def start():
@@ -19,12 +21,12 @@ def reformat_image():
 
 
 def main_tray():
-    icon = Icon('test', reformat_image(),
-                menu=Menu(
-                    MenuItem('Start', start),
-                    MenuItem('Exit', exit)
-                )
-                ).run()
+    Icon('test', reformat_image(),
+         menu=Menu(
+             MenuItem('Start', start),
+             MenuItem('Exit', exit)
+         )
+         ).run()
 
 
 if __name__ == '__main__':

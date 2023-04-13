@@ -1,14 +1,9 @@
 import customtkinter
-import keyboard
-
-from PIL import Image
-from pystray import Icon, MenuItem, Menu
 
 from GPT import get_gpt_ans, get_pattern_list, add_pattern
 
-
-customtkinter.set_appearance_mode("System")  # Modes: "System" (standard), "Dark", "Light"
-customtkinter.set_default_color_theme("blue")  # Themes: "blue" (standard), "green", "dark-blue"
+customtkinter.set_appearance_mode("System")
+customtkinter.set_default_color_theme("blue")
 
 
 class App(customtkinter.CTk):
@@ -61,7 +56,6 @@ class App(customtkinter.CTk):
         self.textbox = customtkinter.CTkTextbox(self, width=500)
         self.textbox.grid(row=0, column=1, padx=(0, 0), pady=(0, 0), sticky="nsew")
 
-
         self.appearance_mode_optionemenu.set("Dark")
         self.scaling_optionemenu.set("100%")
 
@@ -107,16 +101,3 @@ class App(customtkinter.CTk):
     def submit_pattern(self):
         add_pattern(self.entry_title_patt.get(), self.entry_patt.get())
         self.new_pattern_frame.withdraw()
-
-
-
-
-
-
-
-if __name__ == '__main__':
-    keyboard.add_hotkey('ctrl+alt+a', start)
-    keyboard.wait()
-
-
-

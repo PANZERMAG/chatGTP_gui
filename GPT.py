@@ -1,12 +1,10 @@
 import json
-import os
 
 import openai
 
 
-
 def get_gpt_ans(prompt_quest, template_name):
-    openai.api_key = os.getenv("OPENAI_TOKEN")
+    openai.api_key = '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'
     with open('parametrs.json', 'r') as file:
         data = json.load(file)
 
@@ -24,7 +22,6 @@ def get_gpt_ans(prompt_quest, template_name):
 
 
 def add_pattern(pattern_name, pattern):
-
     print(pattern_name, pattern)
 
     with open('parametrs.json', 'r') as file:
@@ -36,7 +33,6 @@ def add_pattern(pattern_name, pattern):
         json.dump(data, file)
 
 
-
 def get_pattern_list():
     with open('parametrs.json', 'r') as file:
         data = json.load(file)
@@ -44,5 +40,3 @@ def get_pattern_list():
         pattern_list.append('+ add new template')
 
         return pattern_list
-
-
