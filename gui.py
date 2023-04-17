@@ -1,4 +1,5 @@
 import customtkinter
+import keyboard
 
 from GPT import get_gpt_ans, get_pattern_list, add_pattern
 
@@ -56,8 +57,13 @@ class App(customtkinter.CTk):
         self.textbox = customtkinter.CTkTextbox(self, width=500)
         self.textbox.grid(row=0, column=1, padx=(0, 0), pady=(0, 0), sticky="nsew")
 
+
         self.appearance_mode_optionemenu.set("Dark")
         self.scaling_optionemenu.set("100%")
+
+        self.textbox.bind('<Control-v>', self.paste_from_clipboard)
+
+
 
     def change_scaling_event(self, new_scaling: str):
         new_scaling_float = int(new_scaling.replace("%", "")) / 100
@@ -97,6 +103,10 @@ class App(customtkinter.CTk):
         answer = get_gpt_ans(text, template)
 
         self.textbox.insert("0.0", answer)
+
+    def paste_from_clipboard(self):
+        text = self.clipboard_get()
+        self.entry.insert(string=text, index=len(self.entry.get()) - 1)
 
     def submit_pattern(self):
         add_pattern(self.entry_title_patt.get(), self.entry_patt.get())
