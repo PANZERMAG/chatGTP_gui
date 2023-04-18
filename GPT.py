@@ -4,7 +4,7 @@ import openai
 
 
 def get_gpt_ans(prompt_quest, template_name):
-    openai.api_key = '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'
+    openai.api_key = TOKEN
     with open('src/parametrs/parametrs.json', 'r') as file:
         data = json.load(file)
 
