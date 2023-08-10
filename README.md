@@ -1,34 +1,73 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
-<a name="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
+<div align="center">
+  
+  [![License](https://img.shields.io/badge/License-MIT-blue)](#license "Go to license section")
+  [![Made with Python](https://img.shields.io/badge/Python->=3.7-blue?logo=python&logoColor=white)](https://python.org "Go to Python homepage")
+</div>
 
+<div align="center">
+  
+  [![PANZERMAG - Automatic_Unpopular_Post_Removal_Tool](https://img.shields.io/static/v1?label=PANZERMAG&message=chatGPT_GUI&color=blue&logo=github)](https://github.com/PANZERMAG/Validation_creditcard)
+  [![stars - badge-generator](https://img.shields.io/github/stars/PANZERMAG/Validation_creditcard?style=social)](https://github.com/PANZERMAG/chatGPT_GUI)
+  [![forks - badge-generator](https://img.shields.io/github/forks/PANZERMAG/Validation_creditcard?style=social)](https://github.com/PANZERMAG/chatGPT_GUI)
+</div>
 
+# chatGPT_gui
+## Description
+This is a user-friendly interface for chatGPT that operates through the official API. The app offers various layouts for a more streamlined user experience. Although it currently only functions as a GUI, it will receive updates in the future with additional capabilities.
 
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+## Installation
 
-# chatGTP_gui
+Install this project with git
 
-##Instruction for install
-
-```pip
-pip install -r requirements.txt
+```bash
+  git clone https://github.com/PANZERMAG/Validation_creditcard.git
 ```
+    
+
+
+## Deployment
+
+Firstly, you need to create a virtual environment
+
+```bash
+  python -m venv venv
+```
+
+After that, you need to activate the virtual environment.
+
+**For Windows:**
+```bash
+  venv/Scripst/activate.bat
+```
+**For Linux:**
+```bash
+  source venv/Scripts/activate
+```
+
+And install the requirement library.
+
+```bash
+  pip install -r requirements.txt
+```
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`API_KEY`
+
+
+
+## Run
+Just run in console and use GUI
+
+**For Windows**
+```bash
+  python main.py
+```
+
+**For Linux**
+```bash
+    python3 main.py
+```
+
+**And use the hotkey Ctrl + Space**
